@@ -1,0 +1,24 @@
+syntax="proto3";
+
+service Products {
+  rpc ReadAll (Empty) returns (stream Product);
+  rpc Create (DescripRequest) returns (Empty);
+  rpc Read (IdRequest) returns (Product);
+  rpc Update (Product) returns (Empty);
+  rpc Delete (IdRequest) returns (Empty);
+}
+
+message Empty {}
+
+message IdRequest {
+  int32 id = 1;
+}
+
+message DescripRequest {
+  string descrip = 1;
+}
+
+message Product {
+  int32 id = 1;
+  string descrip = 2;
+}

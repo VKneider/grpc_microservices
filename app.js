@@ -29,15 +29,13 @@ app.listen(3000, () => {
     console.log("Server running at http://localhost:3000");
 });
 
-app.use((req,res,next)=>{
-    console.log(req.body)
-    next();
-})
+
 
 app.get("/products", function (req, res) {
         
     const rows = [];
     const call = crudClient.readAll();
+
     call.on("data", function (response) {
       rows.push(response);
     });
@@ -52,7 +50,7 @@ app.get("/products", function (req, res) {
 });
 
 
-// Endpoint para obtener un producto por ID
+
 app.get("/products/:id", async function (req, res) {
     if(req.params.id){
 
@@ -91,7 +89,6 @@ app.post("/products", function (req, res) {
     });
 });
 
-// Endpoint para actualizar un producto por ID
 app.put("/products", function (req, res) {
 
 
@@ -110,7 +107,6 @@ app.put("/products", function (req, res) {
     });
 });
 
-// Endpoint para eliminar un producto por ID
 app.delete("/products", function (req, res) {
     
     const deleteProduct = {

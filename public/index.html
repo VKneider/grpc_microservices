@@ -4,89 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRPC</title>
-    <style>
-         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        .container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            overflow-y: auto;
-            max-height: 400px; /* Ajusta la altura máxima según sea necesario */
-        }
-        
-        h1 {
-            color: #0077cc;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            border: 1px solid #dcdcdc;
-            padding: 8px;
-        }
-        
-        th {
-            background-color: #0077cc;
-            color: #fff;
-        }
-        
-        tr:hover {
-            background-color: #f5f5f5; /* Cambia el color de fondo en hover */
-        }
-        
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #dcdcdc;
-            border-radius: 4px;
-        }
-        
-        label {
-            display: block;
-            margin: 10px 0;
-            color: #0077cc;
-        }
-        
-        button {
-            background-color: #0077cc;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>GRPC</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>descrip</th>
-                </tr>
-            </thead>
-            <tbody id="tbody" >
-               
-            </tbody>
-        </table>
+        <div >
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>descrip</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody" >
+                   
+                </tbody>
+            </table>
+        </div>
         <label for="id">ID:</label>
         <input type="text" id="id" placeholder="ID">
         <label for="descrip">Descrip:</label>

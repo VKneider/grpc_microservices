@@ -69,7 +69,7 @@ const db = new Database({
   host: 'localhost',
   database: 'grpc',
   password: 'postgres',
-  port: 5433,
+  port: 5432,
 });
 
 export default db;
